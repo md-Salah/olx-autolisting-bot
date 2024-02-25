@@ -9,7 +9,9 @@ cookies/
 .pytest_cache/
 *.exe
 *.zip
-
+client_req.txt
+olx_data copy.xlsx
+*.log
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
