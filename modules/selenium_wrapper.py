@@ -7,11 +7,11 @@ from requests.exceptions import ConnectTimeout, ReadTimeout, SSLError
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException, InvalidArgumentException, ElementClickInterceptedException
-from selenium.webdriver.chrome.service import Service
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, InvalidArgumentException, ElementClickInterceptedException, StaleElementReferenceException
 
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
@@ -21,6 +21,7 @@ from typing import Optional, Union
 
 import zipfile
 import traceback
+import logging
 
 
 class SeleniumWrapper:
@@ -41,7 +42,7 @@ class SeleniumWrapper:
     # Setup driver with best practice options
     def setup_driver(self, headless: bool = True, profile: Optional[str] = None, proxy: Optional[str] = None, executable_path: str | None = None) -> webdriver.Chrome:
         options = Options()
-        service = Service(executable_path=executable_path) # type: ignore
+        service = Service(executable_path=executable_path)  # type: ignore
 
         if headless:
             options.add_argument('--headless=new')
@@ -83,6 +84,19 @@ class SeleniumWrapper:
                 f'Failed to setup browser. Check if another chrome is open with same profile. See "{self.error_file}" for more info.')
             with open(self.error_file, 'a') as file:
                 traceback.print_exc(file=file)
+            exit()
+
+    def setup_firefox(self, headless: bool = True, profile: Optional[str] = None, proxy: Optional[str] = None, executable_path: str | None = None) -> webdriver.Firefox:
+        from selenium.webdriver.firefox.options import Options
+        from selenium.webdriver.firefox.service import Service
+
+        try:
+            options = Options()
+            service = Service(executable_path=executable_path)  # type: ignore
+            self.driver = webdriver.Firefox(options=options, service=service)
+            return self.driver
+        except Exception:
+            traceback.print_exc()
             exit()
 
     def wait_random_time(self, a: float = 0.20, b: float = 1.20) -> None:
@@ -184,12 +198,13 @@ class SeleniumWrapper:
             print('Cookies file not found, filename: "{}"'.format(cookie_file))
             return False
 
-    def save_cookies(self, cookie_file: str) -> None:
+    def save_cookies(self, cookie_file_pkl: str = 'cookie.pkl') -> None:
+        directory = 'cookies'
         try:
-            if not os.path.exists(cookie_file.split('/')[0]):
-                os.mkdir(cookie_file.split('/')[0])
+            if not os.path.exists(directory):
+                os.mkdir(directory)
 
-            with open(cookie_file, 'wb') as file:
+            with open(os.path.join(directory, cookie_file_pkl), 'wb') as file:
                 pickle.dump(self.driver.get_cookies(), file)
         except Exception:
             self.unhandled_exception()
@@ -255,7 +270,8 @@ class SeleniumWrapper:
 
     def element_send_keys(self, text: str, selector: Optional[str] = None, element: Optional[WebElement] = None, gap: Optional[float] = 0.01, timeout: float = 15) -> bool:
 
-        if len(text) == 0:
+        text = str(text)
+        if not text:
             raise ValueError('Please provide a text to send keys')
         if element:
             pass
@@ -268,7 +284,7 @@ class SeleniumWrapper:
 
         if element:
             try:
-                element.click()
+                self.element_click(element)
                 element.clear()
 
                 if gap:
@@ -279,6 +295,9 @@ class SeleniumWrapper:
                     element.send_keys(text)
 
                 return True
+            except StaleElementReferenceException:
+                print('StaleElementReferenceException, selector: "{}"'.format(
+                    selector))
             except Exception:
                 self.unhandled_exception()
 
@@ -457,9 +476,17 @@ class SeleniumWrapper:
         return pluginfile
 
     def unhandled_exception(self):
-        print('Unexpected error occurred. Please see "{}" for more details.'.format(
-            self.error_file))
+        logging.error(traceback.format_exc())
         with open(self.error_file, 'a') as file:
-            file.write('\n')
             file.write(traceback.format_exc())
             file.write('\n')
+
+    def copy_to_clipboard(self, text: str):
+        import subprocess
+        cmd='echo '+text.strip()+'|clip'
+        return subprocess.check_call(cmd, shell=True)
+    
+    def paste_from_clipboard(self, element: WebElement):
+        self.element_click(element)
+        element.send_keys(Keys.CONTROL, 'v')
+        

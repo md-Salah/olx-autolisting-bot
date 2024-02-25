@@ -1,0 +1,292 @@
+
+Traceback (most recent call last):
+  File "D:\Task Automation\olx-autolisting-bot\modules\selenium_wrapper.py", line 286, in element_send_keys
+    element.click()
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 394, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 344, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input autocomplete="off" type="text" aria-required="false" data-cy="parameters.rulaj_pana" data-testid="parameters.rulaj_pana" id="parameters.rulaj_pana" placeholder="km" aria-describedby="" name="parameters.rulaj_pana" color="#002F34" aria-invalid="false" font-size="16px" aria-labelledby="parameters.rulaj_pana-label" class="css-3uaho6" value=""> is not clickable at point (192, 874). Other element would receive the click: <div class="css-8bnjc8">...</div>
+  (Session info: chrome=121.0.6167.185)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C7A47012+3522402]
+	(No symbol) [0x00007FF6C7668352]
+	(No symbol) [0x00007FF6C7515ABB]
+	(No symbol) [0x00007FF6C7563390]
+	(No symbol) [0x00007FF6C75610D2]
+	(No symbol) [0x00007FF6C755E834]
+	(No symbol) [0x00007FF6C755D569]
+	(No symbol) [0x00007FF6C7551910]
+	(No symbol) [0x00007FF6C757F05A]
+	(No symbol) [0x00007FF6C755120A]
+	(No symbol) [0x00007FF6C757F270]
+	(No symbol) [0x00007FF6C759BDA3]
+	(No symbol) [0x00007FF6C757EE03]
+	(No symbol) [0x00007FF6C754F4D4]
+	(No symbol) [0x00007FF6C75505F1]
+	GetHandleVerifier [0x00007FF6C7A79B9D+3730157]
+	GetHandleVerifier [0x00007FF6C7ACF02D+4079485]
+	GetHandleVerifier [0x00007FF6C7AC75D3+4048163]
+	GetHandleVerifier [0x00007FF6C779A649+718233]
+	(No symbol) [0x00007FF6C7674A3F]
+	(No symbol) [0x00007FF6C766FA94]
+	(No symbol) [0x00007FF6C766FBC2]
+	(No symbol) [0x00007FF6C765F2E4]
+	BaseThreadInitThunk [0x00007FFFE82C257D+29]
+	RtlUserThreadStart [0x00007FFFE862AA58+40]
+
+
+
+Traceback (most recent call last):
+  File "D:\Task Automation\olx-autolisting-bot\modules\selenium_wrapper.py", line 286, in element_send_keys
+    element.click()
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 394, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 344, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input autocomplete="off" type="text" aria-required="false" data-cy="parameters.year" data-testid="parameters.year" id="parameters.year" placeholder="" aria-describedby="" name="parameters.year" color="#002F34" aria-invalid="false" font-size="16px" aria-labelledby="parameters.year-label" class="css-3uaho6" value=""> is not clickable at point (192, 874). Other element would receive the click: <div class="css-8bnjc8">...</div>
+  (Session info: chrome=121.0.6167.185)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C7A47012+3522402]
+	(No symbol) [0x00007FF6C7668352]
+	(No symbol) [0x00007FF6C7515ABB]
+	(No symbol) [0x00007FF6C7563390]
+	(No symbol) [0x00007FF6C75610D2]
+	(No symbol) [0x00007FF6C755E834]
+	(No symbol) [0x00007FF6C755D569]
+	(No symbol) [0x00007FF6C7551910]
+	(No symbol) [0x00007FF6C757F05A]
+	(No symbol) [0x00007FF6C755120A]
+	(No symbol) [0x00007FF6C757F270]
+	(No symbol) [0x00007FF6C759BDA3]
+	(No symbol) [0x00007FF6C757EE03]
+	(No symbol) [0x00007FF6C754F4D4]
+	(No symbol) [0x00007FF6C75505F1]
+	GetHandleVerifier [0x00007FF6C7A79B9D+3730157]
+	GetHandleVerifier [0x00007FF6C7ACF02D+4079485]
+	GetHandleVerifier [0x00007FF6C7AC75D3+4048163]
+	GetHandleVerifier [0x00007FF6C779A649+718233]
+	(No symbol) [0x00007FF6C7674A3F]
+	(No symbol) [0x00007FF6C766FA94]
+	(No symbol) [0x00007FF6C766FBC2]
+	(No symbol) [0x00007FF6C765F2E4]
+	BaseThreadInitThunk [0x00007FFFE82C257D+29]
+	RtlUserThreadStart [0x00007FFFE862AA58+40]
+
+
+
+Traceback (most recent call last):
+  File "D:\Task Automation\olx-autolisting-bot\modules\selenium_wrapper.py", line 287, in element_send_keys
+    element.click()
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 394, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 344, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input autocomplete="off" type="text" aria-required="false" data-cy="parameters.year" data-testid="parameters.year" id="parameters.year" placeholder="" aria-describedby="" name="parameters.year" color="#002F34" aria-invalid="false" font-size="16px" aria-labelledby="parameters.year-label" class="css-3uaho6" value=""> is not clickable at point (192, 874). Other element would receive the click: <div class="css-8bnjc8">...</div>
+  (Session info: chrome=121.0.6167.185)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C7A47012+3522402]
+	(No symbol) [0x00007FF6C7668352]
+	(No symbol) [0x00007FF6C7515ABB]
+	(No symbol) [0x00007FF6C7563390]
+	(No symbol) [0x00007FF6C75610D2]
+	(No symbol) [0x00007FF6C755E834]
+	(No symbol) [0x00007FF6C755D569]
+	(No symbol) [0x00007FF6C7551910]
+	(No symbol) [0x00007FF6C757F05A]
+	(No symbol) [0x00007FF6C755120A]
+	(No symbol) [0x00007FF6C757F270]
+	(No symbol) [0x00007FF6C759BDA3]
+	(No symbol) [0x00007FF6C757EE03]
+	(No symbol) [0x00007FF6C754F4D4]
+	(No symbol) [0x00007FF6C75505F1]
+	GetHandleVerifier [0x00007FF6C7A79B9D+3730157]
+	GetHandleVerifier [0x00007FF6C7ACF02D+4079485]
+	GetHandleVerifier [0x00007FF6C7AC75D3+4048163]
+	GetHandleVerifier [0x00007FF6C779A649+718233]
+	(No symbol) [0x00007FF6C7674A3F]
+	(No symbol) [0x00007FF6C766FA94]
+	(No symbol) [0x00007FF6C766FBC2]
+	(No symbol) [0x00007FF6C765F2E4]
+	BaseThreadInitThunk [0x00007FFFE82C257D+29]
+	RtlUserThreadStart [0x00007FFFE862AA58+40]
+
+
+Traceback (most recent call last):
+  File "D:\Task Automation\olx-autolisting-bot\modules\selenium_wrapper.py", line 292, in element_send_keys
+    element.send_keys(char)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 230, in send_keys
+    self._execute(
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 394, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 344, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.69); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF642D44C82+3505170]
+	(No symbol) [0x00007FF642970852]
+	(No symbol) [0x00007FF642824145]
+	(No symbol) [0x00007FF6428290C1]
+	(No symbol) [0x00007FF64282B54B]
+	(No symbol) [0x00007FF64282B610]
+	(No symbol) [0x00007FF64286A7A4]
+	(No symbol) [0x00007FF64286A892]
+	(No symbol) [0x00007FF6428623A2]
+	(No symbol) [0x00007FF64288BE8A]
+	(No symbol) [0x00007FF64285F27A]
+	(No symbol) [0x00007FF64288C0A0]
+	(No symbol) [0x00007FF6428A83B2]
+	(No symbol) [0x00007FF64288BC33]
+	(No symbol) [0x00007FF64285D618]
+	(No symbol) [0x00007FF64285E6B1]
+	GetHandleVerifier [0x00007FF642D767DD+3708781]
+	GetHandleVerifier [0x00007FF642DCFC5D+4074477]
+	GetHandleVerifier [0x00007FF642DC7DDF+4042095]
+	GetHandleVerifier [0x00007FF642A9A136+708806]
+	(No symbol) [0x00007FF64297CB0F]
+	(No symbol) [0x00007FF642977D14]
+	(No symbol) [0x00007FF642977E6C]
+	(No symbol) [0x00007FF6429679A4]
+	BaseThreadInitThunk [0x00007FFFE82C257D+29]
+	RtlUserThreadStart [0x00007FFFE862AA58+40]
+
+
+Traceback (most recent call last):
+  File "D:\Task Automation\olx-autolisting-bot\modules\selenium_wrapper.py", line 110, in get_page
+    return BeautifulSoup(self.driver.page_source, 'html.parser')
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 445, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 344, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : 
+Message: unexpected alert open: {Alert text : }
+  (Session info: chrome=122.0.6261.69)
+Stacktrace:
+	GetHandleVerifier [0x00007FF642D44C82+3505170]
+	(No symbol) [0x00007FF642970852]
+	(No symbol) [0x00007FF642824145]
+	(No symbol) [0x00007FF6428A8B10]
+	(No symbol) [0x00007FF64288BC33]
+	(No symbol) [0x00007FF64285D618]
+	(No symbol) [0x00007FF64285E6B1]
+	GetHandleVerifier [0x00007FF642D767DD+3708781]
+	GetHandleVerifier [0x00007FF642DCFC5D+4074477]
+	GetHandleVerifier [0x00007FF642DC7DDF+4042095]
+	GetHandleVerifier [0x00007FF642A9A136+708806]
+	(No symbol) [0x00007FF64297CB0F]
+	(No symbol) [0x00007FF642977D14]
+	(No symbol) [0x00007FF642977E6C]
+	(No symbol) [0x00007FF6429679A4]
+	BaseThreadInitThunk [0x00007FFFE82C257D+29]
+	RtlUserThreadStart [0x00007FFFE862AA58+40]
+
+
+Traceback (most recent call last):
+  File "D:\Task Automation\olx-autolisting-bot\modules\selenium_wrapper.py", line 292, in element_send_keys
+    element.send_keys(char)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 230, in send_keys
+    self._execute(
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 394, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 344, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.69); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF642D44C82+3505170]
+	(No symbol) [0x00007FF642970852]
+	(No symbol) [0x00007FF642824145]
+	(No symbol) [0x00007FF6428290C1]
+	(No symbol) [0x00007FF64282B54B]
+	(No symbol) [0x00007FF64282B610]
+	(No symbol) [0x00007FF64286A7A4]
+	(No symbol) [0x00007FF64286A892]
+	(No symbol) [0x00007FF6428623A2]
+	(No symbol) [0x00007FF64288BE8A]
+	(No symbol) [0x00007FF64285F27A]
+	(No symbol) [0x00007FF64288C0A0]
+	(No symbol) [0x00007FF6428A83B2]
+	(No symbol) [0x00007FF64288BC33]
+	(No symbol) [0x00007FF64285D618]
+	(No symbol) [0x00007FF64285E6B1]
+	GetHandleVerifier [0x00007FF642D767DD+3708781]
+	GetHandleVerifier [0x00007FF642DCFC5D+4074477]
+	GetHandleVerifier [0x00007FF642DC7DDF+4042095]
+	GetHandleVerifier [0x00007FF642A9A136+708806]
+	(No symbol) [0x00007FF64297CB0F]
+	(No symbol) [0x00007FF642977D14]
+	(No symbol) [0x00007FF642977E6C]
+	(No symbol) [0x00007FF6429679A4]
+	BaseThreadInitThunk [0x00007FFFE82C257D+29]
+	RtlUserThreadStart [0x00007FFFE862AA58+40]
+
+
+Traceback (most recent call last):
+  File "D:\Task Automation\olx-autolisting-bot\modules\selenium_wrapper.py", line 80, in setup_driver
+    self.driver = webdriver.Chrome(options=options, service=service)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\chromium\webdriver.py", line 56, in __init__
+    super().__init__(
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 205, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 289, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 344, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\mypc0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+	GetHandleVerifier [0x00007FF642D44C82+3505170]
+	(No symbol) [0x00007FF642970852]
+	(No symbol) [0x00007FF642824145]
+	(No symbol) [0x00007FF642854821]
+	(No symbol) [0x00007FF6428507D4]
+	(No symbol) [0x00007FF642895B5F]
+	(No symbol) [0x00007FF6428956C0]
+	(No symbol) [0x00007FF64288BC33]
+	(No symbol) [0x00007FF64285D618]
+	(No symbol) [0x00007FF64285E6B1]
+	GetHandleVerifier [0x00007FF642D767DD+3708781]
+	GetHandleVerifier [0x00007FF642DCFC5D+4074477]
+	GetHandleVerifier [0x00007FF642DC7DDF+4042095]
+	GetHandleVerifier [0x00007FF642A9A136+708806]
+	(No symbol) [0x00007FF64297CB0F]
+	(No symbol) [0x00007FF642977D14]
+	(No symbol) [0x00007FF642977E6C]
+	(No symbol) [0x00007FF6429679A4]
+	BaseThreadInitThunk [0x00007FFFE82C257D+29]
+	RtlUserThreadStart [0x00007FFFE862AA58+40]
+

@@ -1,30 +1,37 @@
 import time
+import traceback
+from html import unescape
 
 from modules.utility import print_execution_time
-from modules.selenium_wrapper import SeleniumWrapper
+from modules.olx import OLX
 
+import pandas as pd
 
 def main():
-
-    spider = SeleniumWrapper()
-
-    spider.setup_driver(headless=False)
-
-    spider.get_page('https://www.google.com/')
-    spider.element_send_keys(text='Who is lionel messi?',
-                                selector='textarea[name="q"]',
-                                )
-
-    print('Chrome is opened and the search is done.')
-
-    input('Exit? Press ENTER: ')
+    df = pd.read_excel('files/olx_data.xlsx', sheet_name='Cars')
+    df['Description'] = df['Description'].apply(unescape)
+    cars = df.to_dict(orient='records')
     
-    del spider
-    
+    df = pd.read_excel('files/olx_data.xlsx', sheet_name='Accounts')
+    accounts = df.to_dict(orient='records')
+
+    for account in accounts:
+        olx = OLX()
+        if olx.login(account['username'], account['password']):
+            for index, car in enumerate(cars):
+                olx.post_item(car)
+                if index == 0:
+                    olx.uncheck_view_profile()
+        
 
 if __name__ == '__main__':
     start_time = time.time()
+    
+    try:
+        main()
+    except Exception:
+        traceback.print_exc()
+    finally:
+        print_execution_time(start_time)
+        
 
-    main()
-
-    print_execution_time(start_time)
